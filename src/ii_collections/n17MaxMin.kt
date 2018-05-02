@@ -10,7 +10,3 @@ fun Shop.getCustomerWithMaximumNumberOfOrders(): Customer? =
 
 fun Customer.getMostExpensiveOrderedProduct(): Product? =
         orderedProducts.maxBy { it.price }
-//{
-//    // Return the most expensive product which has been ordered
-//    todoCollectionTask()
-//}

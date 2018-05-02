@@ -9,5 +9,5 @@ fun Customer.getMostExpensiveDeliveredProduct(): Product? {
 }
 
 fun Shop.getNumberOfTimesProductWasOrdered(product: Product): Int {
-    return customers.flatMap { it.orders }.flatMap { it.products }.filter { it == product }.count()
+    return customers.flatMap { it.orders }.flatMap { it.products }.count { it == product }
 }

@@ -6,4 +6,4 @@ fun example6() {
 }
 
 fun Customer.getTotalOrderPrice(): Double =
-        orders.map { it.products.sumByDouble { it.price } }.sum()
+        orders.flatMap { it.products}.sumByDouble { it.price }

@@ -1,7 +1,5 @@
 package ii_collections
 
-import com.google.common.collect.Lists
-import com.google.common.collect.Maps
 import util.TODO
 
 fun todoTask24(): Nothing = TODO(
