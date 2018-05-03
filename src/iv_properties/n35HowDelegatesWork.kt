@@ -30,7 +30,7 @@ class EffectiveDate<R> : ReadWriteProperty<R, MyDate> {
     var timeInMillis: Long? = null
 
     operator override fun getValue(thisRef: R, property: KProperty<*>): MyDate = timeInMillis!!.toDate()
-    operator override fun setValue(thisRef: R, property: KProperty<*>, value: MyDate) { timeInMillis = value.toMillis()}
+    operator override fun setValue(thisRef: R, property: KProperty<*>, value: MyDate) { timeInMillis = value.toMillis() }
 }
 
 fun MyDate.toMillis(): Long {
