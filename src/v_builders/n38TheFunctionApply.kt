@@ -9,9 +9,8 @@ fun todoTask38(): Nothing = TODO(
 )
 
 fun <T> T.myApply(f: T.() -> Unit): T {
-    var i: T = this
-    i.f()
-    return i
+    f()
+    return this
 }
 
 fun buildString(): String {

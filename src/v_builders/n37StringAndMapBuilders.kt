@@ -1,9 +1,7 @@
 package v_builders
 
-import com.google.common.collect.Maps
 import util.TODO
 import java.util.*
-import kotlin.collections.HashMap
 
 fun buildStringExample(): String {
     fun buildString(build: StringBuilder.() -> Unit): String {
@@ -30,17 +28,18 @@ fun todoTask37(): Nothing = TODO(
     """
 )
 
+fun <K, V> buildMap(build: MutableMap<K, V>.() -> Unit): Map<K, V> {
+    val map = HashMap<K, V>()
+    map.build()
+    return map
+}
+
 fun task37(): Map<Int, String> {
+//    todoTask37()
     return buildMap {
-        this.put(0, "0")
+        put(0, "0")
         for (i in 1..10) {
             put(i, "$i")
         }
     }
-}
-
-fun buildMap(build: MutableMap<Int, String>.() -> Unit): MutableMap<Int, String> {
-    val map = HashMap<Int, String>()
-    map.build()
-    return map
 }
